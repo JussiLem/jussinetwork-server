@@ -1,11 +1,11 @@
-package me.jussilemmetyinen.socialnetwork.bookmarks;
+package me.jussilemmetyinen.jussinetwork.bookmarks;
 
 import java.util.Arrays;
 
-import me.jussilemmetyinen.socialnetwork.bookmarks.domain.Account;
-import me.jussilemmetyinen.socialnetwork.bookmarks.domain.Bookmark;
-import me.jussilemmetyinen.socialnetwork.bookmarks.repository.AccountRepository;
-import me.jussilemmetyinen.socialnetwork.bookmarks.repository.BookmarkRepository;
+import me.jussilemmetyinen.jussinetwork.bookmarks.domain.Account;
+import me.jussilemmetyinen.jussinetwork.bookmarks.domain.Bookmark;
+import me.jussilemmetyinen.jussinetwork.bookmarks.repository.AccountRepository;
+import me.jussilemmetyinen.jussinetwork.bookmarks.repository.BookmarkRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

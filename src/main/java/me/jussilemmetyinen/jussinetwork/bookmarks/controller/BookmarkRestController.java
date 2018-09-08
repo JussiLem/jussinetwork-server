@@ -1,10 +1,10 @@
-package me.jussilemmetyinen.socialnetwork.bookmarks.controller;
+package me.jussilemmetyinen.jussinetwork.bookmarks.controller;
 
-import me.jussilemmetyinen.socialnetwork.bookmarks.domain.Bookmark;
-import me.jussilemmetyinen.socialnetwork.bookmarks.exception.BookmarkNotFoundException;
-import me.jussilemmetyinen.socialnetwork.bookmarks.exception.UserNotFoundException;
-import me.jussilemmetyinen.socialnetwork.bookmarks.repository.AccountRepository;
-import me.jussilemmetyinen.socialnetwork.bookmarks.repository.BookmarkRepository;
+import me.jussilemmetyinen.jussinetwork.bookmarks.domain.Bookmark;
+import me.jussilemmetyinen.jussinetwork.bookmarks.exception.BookmarkNotFoundException;
+import me.jussilemmetyinen.jussinetwork.bookmarks.exception.UserNotFoundException;
+import me.jussilemmetyinen.jussinetwork.bookmarks.repository.AccountRepository;
+import me.jussilemmetyinen.jussinetwork.bookmarks.repository.BookmarkRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

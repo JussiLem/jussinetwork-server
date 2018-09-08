@@ -1,4 +1,4 @@
-package me.jussilemmetyinen.socialnetwork.bookmarks.domain;
+package me.jussilemmetyinen.jussinetwork.bookmarks.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 

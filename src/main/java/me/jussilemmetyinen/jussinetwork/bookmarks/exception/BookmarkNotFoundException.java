@@ -1,4 +1,4 @@
-package me.jussilemmetyinen.socialnetwork.bookmarks.exception;
+package me.jussilemmetyinen.jussinetwork.bookmarks.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;

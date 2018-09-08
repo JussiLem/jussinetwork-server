@@ -1,0 +1,4 @@
+{
+  "name" : "Jussinetwork gradle app",
+  "image": "heroku/gradle"
+}

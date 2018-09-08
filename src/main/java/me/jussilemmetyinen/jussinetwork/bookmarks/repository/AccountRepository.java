@@ -1,8 +1,8 @@
-package me.jussilemmetyinen.socialnetwork.bookmarks.repository;
+package me.jussilemmetyinen.jussinetwork.bookmarks.repository;
 
 import java.util.Optional;
 
-import me.jussilemmetyinen.socialnetwork.bookmarks.domain.Account;
+import me.jussilemmetyinen.jussinetwork.bookmarks.domain.Account;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface AccountRepository extends JpaRepository<Account, Long>{
