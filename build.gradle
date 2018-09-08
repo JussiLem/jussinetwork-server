@@ -1,0 +1,44 @@
+buildscript {
+    ext {
+        springBootVersion = '2.0.4.RELEASE'
+    }
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}
+group 'me.jussilemmetyinen'
+version '0.0.1-SNAPSHOT'
+
+apply plugin: 'io.spring.dependency-management'
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'org.springframework.boot'
+
+sourceCompatibility = 1.10
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+ext {
+    springVersion = '2.0.4.RELEASE'
+    junitVersion  = '5.2.0'
+}
+
+dependencies {
+    implementation group: 'org.springframework.data', name: 'spring-data-rest-core', version: '3.0.9.RELEASE'
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa', version: '2.0.4.RELEASE'
+    implementation ("org.springframework.boot:spring-boot-starter-hateoas")
+    implementation group: 'javax.persistence', name: 'javax.persistence-api', version: '2.2'
+    implementation ("org.springframework.boot:spring-boot-starter-web:${springVersion}")
+    implementation ("org.springframework.boot:spring-boot-starter-actuator")
+    implementation ("com.google.flogger:flogger:0.3.1")
+    implementation ("com.google.flogger:flogger-system-backend:0.3.1")
+    runtime('com.h2database:h2')
+    testImplementation ("com.jayway.jsonpath:json-path")
+    testImplementation("org.springframework.boot:spring-boot-starter-test:${springVersion}")
+    testImplementation "org.junit.jupiter:junit-jupiter-api:${junitVersion}"
+}
