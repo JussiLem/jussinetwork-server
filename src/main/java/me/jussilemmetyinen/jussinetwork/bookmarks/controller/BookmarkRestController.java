@@ -15,7 +15,7 @@ import java.util.Collection;
 
 @RestController
 @RequestMapping("/bookmarks/{userId}")
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "http://localhost:4200", maxAge = 3600)
 class BookmarkRestController {
 
     private final BookmarkRepository bookmarkRepository;
