@@ -1,4 +1,4 @@
-package me.jussilemmetyinen.socialnetwork.bookmarks;
+package me.jussilemmetyinen.jussinetwork.bookmarks;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
