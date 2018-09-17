@@ -1,4 +1,4 @@
-package me.jussilemmetyinen.jussinetwork.bookmarks.domain;
+package me.jussilemmetyinen.jussinetwork.bookmarks.persistence.domain;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

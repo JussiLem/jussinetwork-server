@@ -1,6 +1,6 @@
 package me.jussilemmetyinen.jussinetwork.bookmarks.controller;
 
-import me.jussilemmetyinen.jussinetwork.bookmarks.domain.Bookmark;
+import me.jussilemmetyinen.jussinetwork.bookmarks.persistence.domain.Bookmark;
 import me.jussilemmetyinen.jussinetwork.bookmarks.exception.BookmarkNotFoundException;
 import me.jussilemmetyinen.jussinetwork.bookmarks.exception.UserNotFoundException;
 import me.jussilemmetyinen.jussinetwork.bookmarks.repository.AccountRepository;

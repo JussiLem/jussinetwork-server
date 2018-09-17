@@ -1,4 +1,4 @@
-package me.jussilemmetyinen.jussinetwork.bookmarks.domain;
+package me.jussilemmetyinen.jussinetwork.bookmarks.persistence.domain;
 
 import javax.persistence.*;
 import java.util.Collection;
@@ -43,22 +43,22 @@ public class Privilege {
     }
 
     @Override
-    public boolean equals(Object object) {
-        if (this == object) {
+    public boolean equals(Object obj) {
+        if (this == obj) {
             return true;
-        } if (object == null) {
-            return false;
-        } if (getClass() != object.getClass()) {
+        }
+        if (obj == null) {
             return false;
         }
-        Privilege other = (Privilege) object;
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        Privilege other = (Privilege) obj;
         if (name == null) {
-            if (other.name != null) {
-                return false;
-            } else if (!name.equals(other.name)) {
-                return false;
-            }
-        } return true;
+            return other.name == null;
+        } else {
+            return name.equals(other.name);
+        }
     }
 
     @Override

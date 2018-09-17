@@ -2,7 +2,7 @@ package me.jussilemmetyinen.jussinetwork.bookmarks.repository;
 
 import java.util.Optional;
 
-import me.jussilemmetyinen.jussinetwork.bookmarks.domain.Account;
+import me.jussilemmetyinen.jussinetwork.bookmarks.persistence.domain.Account;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface AccountRepository extends JpaRepository<Account, Long>{
