@@ -30,6 +30,7 @@ ext {
 }
 
 dependencies {
+    implementation group: 'com.google.guava', name: 'guava', version: '26.0-jre'
     implementation group: 'org.passay', name: 'passay', version: '1.0'
     implementation 'org.scala-lang:scala-library:2.13.0-M5'
     implementation group: 'org.springframework.data', name: 'spring-data-rest-core', version: '3.0.9.RELEASE'
