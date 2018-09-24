@@ -11,15 +11,15 @@ import java.util.stream.Stream;
 
 public interface VerificationTokenRepository extends JpaRepository<VerificationToken, Long> {
 
-    PasswordResetTokenRepository findByToken(String token);
+    VerificationToken findByToken(String token);
 
-    PasswordResetTokenRepository findByUser(User user);
+    VerificationToken findByUser(User user);
 
-    Stream<PasswordResetTokenRepository> findAllByExpiryDateLessThan(Date now);
+    Stream<VerificationToken> findAllByExpiryDateLessThan(Date now);
 
     void deleteByExpiryDateLessThan(Date now);
 
     @Modifying
-    @Query("delete from PasswordResetToken t where t.expiryDate <= ?1")
+    @Query("delete from VerificationToken t where t.expiryDate <= ?1")
     void deleteAllExpiredSince(Date now);
 }
