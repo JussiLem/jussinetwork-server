@@ -1,4 +1,4 @@
-package me.jussilemmetyinen.jussinetwork.bookmarks.persistence.domain;
+package me.jussilemmetyinen.jussinetwork.bookmarks.persistence.model;
 
 import javax.persistence.*;
 import java.util.Collection;

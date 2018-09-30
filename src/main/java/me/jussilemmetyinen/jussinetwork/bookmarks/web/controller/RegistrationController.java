@@ -1,16 +1,16 @@
-package me.jussilemmetyinen.jussinetwork.bookmarks.controller;
+package me.jussilemmetyinen.jussinetwork.bookmarks.web.controller;
 
-import me.jussilemmetyinen.jussinetwork.bookmarks.dto.PasswordDto;
-import me.jussilemmetyinen.jussinetwork.bookmarks.dto.UserDto;
-import me.jussilemmetyinen.jussinetwork.bookmarks.exception.InvalidOldPasswordException;
-import me.jussilemmetyinen.jussinetwork.bookmarks.persistence.domain.Privilege;
-import me.jussilemmetyinen.jussinetwork.bookmarks.persistence.domain.Role;
-import me.jussilemmetyinen.jussinetwork.bookmarks.persistence.domain.User;
-import me.jussilemmetyinen.jussinetwork.bookmarks.persistence.domain.VerificationToken;
+import me.jussilemmetyinen.jussinetwork.bookmarks.web.dto.PasswordDto;
+import me.jussilemmetyinen.jussinetwork.bookmarks.web.dto.UserDto;
+import me.jussilemmetyinen.jussinetwork.bookmarks.web.error.InvalidOldPasswordException;
+import me.jussilemmetyinen.jussinetwork.bookmarks.persistence.model.Privilege;
+import me.jussilemmetyinen.jussinetwork.bookmarks.persistence.model.Role;
+import me.jussilemmetyinen.jussinetwork.bookmarks.persistence.model.User;
+import me.jussilemmetyinen.jussinetwork.bookmarks.persistence.model.VerificationToken;
 import me.jussilemmetyinen.jussinetwork.bookmarks.registration.OnRegistrationCompleteEvent;
 import me.jussilemmetyinen.jussinetwork.bookmarks.security.ISecurityUserService;
 import me.jussilemmetyinen.jussinetwork.bookmarks.service.IUserService;
-import me.jussilemmetyinen.jussinetwork.bookmarks.util.GenericResponse;
+import me.jussilemmetyinen.jussinetwork.bookmarks.web.util.GenericResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.context.MessageSource;

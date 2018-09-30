@@ -1,8 +1,8 @@
 package me.jussilemmetyinen.jussinetwork.bookmarks;
 
 import me.jussilemmetyinen.jussinetwork.bookmarks.persistence.dao.VerificationTokenRepository;
-import me.jussilemmetyinen.jussinetwork.bookmarks.persistence.domain.User;
-import me.jussilemmetyinen.jussinetwork.bookmarks.persistence.domain.VerificationToken;
+import me.jussilemmetyinen.jussinetwork.bookmarks.persistence.model.User;
+import me.jussilemmetyinen.jussinetwork.bookmarks.persistence.model.VerificationToken;
 import me.jussilemmetyinen.jussinetwork.bookmarks.repository.UserRepository;
 import me.jussilemmetyinen.jussinetwork.bookmarks.spring.ServiceConfig;
 import me.jussilemmetyinen.jussinetwork.bookmarks.spring.TestDbConfig;

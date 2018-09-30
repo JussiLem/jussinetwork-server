@@ -6,8 +6,10 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class AppConfig {
-    //beans
+  // beans
 
-    @Bean
-    public ActiveUserStore activeUserStore() { return new ActiveUserStore(); }
+  @Bean
+  public ActiveUserStore activeUserStore() {
+    return new ActiveUserStore();
+  }
 }
