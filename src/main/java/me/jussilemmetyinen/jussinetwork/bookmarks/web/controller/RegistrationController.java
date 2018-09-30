@@ -168,7 +168,7 @@ public class RegistrationController {
     return new GenericResponse(messages.getMessage("message.updatePasswordSuc", null, locale));
   }
 
-  @RequestMapping(value = "/user/update/2fa", method = RequestMethod.POST)
+  @PostMapping(value = "/user/update/2fa")
   @ResponseBody
   public GenericResponse modifyUser2FA(@RequestParam("use2FA") final boolean use2FA)
       throws UnsupportedEncodingException {
