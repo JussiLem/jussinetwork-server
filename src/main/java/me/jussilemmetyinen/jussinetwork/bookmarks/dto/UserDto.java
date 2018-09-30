@@ -30,7 +30,6 @@ public class UserDto {
     private String email;
 
     private boolean isUsing2FA;
-    private Integer role;
 
     public String getEmail() {
         return email;
@@ -39,6 +38,8 @@ public class UserDto {
     public void setEmail(final String email) {
         this.email = email;
     }
+
+    private Integer role;
 
     public Integer getRole() {
         return role;
@@ -90,15 +91,16 @@ public class UserDto {
 
     @Override
     public String toString() {
-        return "UserDto [firstName=" + firstName +
-                ", lastName=" + lastName +
-                ", password=" + password +
-                ", matchingPassword=" + matchingPassword +
-                ", email=" + email +
-                ", isUsing2FA=" +
-                isUsing2FA +
-                ", role=" + role + "]";
-
+        final StringBuilder builder = new StringBuilder();
+        builder.append("UserDto [firstName=").append(firstName)
+                .append(", lastName=").append(lastName)
+                .append(", password=").append(password)
+                .append(", matchingPassword=").append(matchingPassword)
+                .append(", email=").append(email)
+                .append(", isUsing2FA=")
+                .append(isUsing2FA)
+                .append(", role=").append(role).append("]");
+        return builder.toString();
     }
 
 }

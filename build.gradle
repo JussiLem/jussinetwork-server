@@ -25,30 +25,31 @@ repositories {
 }
 ext {
     springVersion = '2.0.4.RELEASE'
-    junitVersion  = '5.2.0'
+    junitVersion = '5.2.0'
 }
 
 dependencies {
     implementation group: 'javax.xml.bind', name: 'jaxb-api', version: '2.3.0'
+    annotationProcessor group: 'org.projectlombok', name: 'lombok', version: '1.18.2'
     implementation group: 'org.projectlombok', name: 'lombok', version: '1.18.2'
     implementation group: 'com.google.guava', name: 'guava', version: '26.0-jre'
     implementation group: 'org.passay', name: 'passay', version: '1.0'
     implementation group: 'org.springframework.boot', name: 'spring-boot-starter-mail', version: '2.0.5.RELEASE'
     implementation group: 'org.springframework.data', name: 'spring-data-rest-core', version: '3.0.9.RELEASE'
     implementation group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa', version: '2.0.4.RELEASE'
-    implementation ("org.springframework.boot:spring-boot-starter-hateoas")
+    implementation("org.springframework.boot:spring-boot-starter-hateoas")
     implementation group: 'javax.persistence', name: 'javax.persistence-api', version: '2.2'
-    implementation ("org.springframework.boot:spring-boot-starter-web:${springVersion}")
-    implementation ("org.springframework.boot:spring-boot-starter-actuator")
+    implementation("org.springframework.boot:spring-boot-starter-web:${springVersion}")
+    implementation("org.springframework.boot:spring-boot-starter-actuator")
     implementation group: 'org.springframework.boot', name: 'spring-boot-starter-security', version: '2.0.4.RELEASE'
     implementation group: 'org.springframework.security.oauth', name: 'spring-security-oauth2', version: '2.3.3.RELEASE'
     implementation group: 'org.springframework.security', name: 'spring-security-crypto', version: '5.0.7.RELEASE'
     implementation group: 'org.jboss.aerogear', name: 'aerogear-otp-java', version: '1.0.0'
 
-    implementation ("com.google.flogger:flogger:0.3.1")
-    implementation ("com.google.flogger:flogger-system-backend:0.3.1")
+    implementation("com.google.flogger:flogger:0.3.1")
+    implementation("com.google.flogger:flogger-system-backend:0.3.1")
     runtime('com.h2database:h2')
-    testImplementation ("com.jayway.jsonpath:json-path")
+    testImplementation("com.jayway.jsonpath:json-path")
     testImplementation("org.springframework.boot:spring-boot-starter-test:${springVersion}")
     testImplementation "org.junit.jupiter:junit-jupiter-api:${junitVersion}"
 }

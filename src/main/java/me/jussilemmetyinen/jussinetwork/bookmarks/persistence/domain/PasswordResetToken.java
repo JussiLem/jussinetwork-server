@@ -38,6 +38,10 @@ public class PasswordResetToken {
         this.expiryDate = calculateExpiryDate(EXPIRATION);
     }
 
+    public PasswordResetToken(String token, User user) {
+
+    }
+
     public Long getId() {
         return id;
     }

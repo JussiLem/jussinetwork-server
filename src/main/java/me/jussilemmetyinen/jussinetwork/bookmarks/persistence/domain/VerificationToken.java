@@ -12,18 +12,27 @@ public class VerificationToken {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+
     private String token;
 
     @OneToOne(targetEntity = User.class, fetch = FetchType.EAGER)
-    @JoinColumn(nullable = false, name = "user_id", foreignKey = @ForeignKey(name =
-    "FK_VERIFY_USER"))
+    @JoinColumn(nullable = false, name = "user_id", foreignKey = @ForeignKey(name = "FK_VERIFY_USER"))
     private User user;
 
     private Date expiryDate;
 
-    public VerificationToken() { super(); }
+    public VerificationToken() {
+        super();
+    }
 
     public VerificationToken(final String token) {
+        super();
+
+        this.token = token;
+        this.expiryDate = calculateExpiryDate(EXPIRATION);
+    }
+
+    public VerificationToken(final String token, final User user) {
         super();
 
         this.token = token;
@@ -31,25 +40,39 @@ public class VerificationToken {
         this.expiryDate = calculateExpiryDate(EXPIRATION);
     }
 
-    public Long getId() { return id; }
+    public Long getId() {
+        return id;
+    }
 
-    public String getToken() { return token; }
+    public String getToken() {
+        return token;
+    }
 
-    public void setToken(final String token) { this.token = token; }
+    public void setToken(final String token) {
+        this.token = token;
+    }
 
-    public User getUser() { return user; }
+    public User getUser() {
+        return user;
+    }
 
-    public void setUser(final User user) { this.user = user; }
+    public void setUser(final User user) {
+        this.user = user;
+    }
 
-    public Date getExpiryDate() {return expiryDate; }
+    public Date getExpiryDate() {
+        return expiryDate;
+    }
 
-    public void setExpiryDate(final Date expiryDate) { this.expiryDate = expiryDate; }
+    public void setExpiryDate(final Date expiryDate) {
+        this.expiryDate = expiryDate;
+    }
 
-    private Date calculateExpiryDate(int expiration) {
-        final Calendar calendar = Calendar.getInstance();
-        calendar.setTimeInMillis(new Date().getTime());
-        calendar.add(Calendar.MINUTE, VerificationToken.EXPIRATION);
-        return new Date(calendar.getTime().getTime());
+    private Date calculateExpiryDate(final int expiryTimeInMinutes) {
+        final Calendar cal = Calendar.getInstance();
+        cal.setTimeInMillis(new Date().getTime());
+        cal.add(Calendar.MINUTE, expiryTimeInMinutes);
+        return new Date(cal.getTime().getTime());
     }
 
     public void updateToken(final String token) {
@@ -68,6 +91,7 @@ public class VerificationToken {
         result = prime * result + ((user == null) ? 0 : user.hashCode());
         return result;
     }
+
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -95,12 +119,21 @@ public class VerificationToken {
             return false;
         }
         if (user == null) {
-            return other.user == null;
-        } else return user.equals(other.user);
+            if (other.user != null) {
+                return false;
+            }
+        } else if (!user.equals(other.user)) {
+            return false;
+        }
+        return true;
     }
 
     @Override
     public String toString() {
-        return "Token [String=" + token + "]" + "[Expires" + expiryDate + "]";
+        final StringBuilder builder = new StringBuilder();
+        builder.append("Token [String=").append(token).append("]").append("[Expires")
+                .append(expiryDate).append("]");
+        return builder.toString();
     }
+
 }
