@@ -5,5 +5,4 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 @ComponentScan("me.jussilemmetyinen.jussinetwork.bookmarks.service")
-public class ServiceConfig {
-}
+public class ServiceConfig {}

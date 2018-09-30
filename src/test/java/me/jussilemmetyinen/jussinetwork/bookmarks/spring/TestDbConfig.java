@@ -5,5 +5,4 @@ import org.springframework.context.annotation.Primary;
 
 @Configuration
 @Primary
-public class TestDbConfig {
-}
+public class TestDbConfig {}
