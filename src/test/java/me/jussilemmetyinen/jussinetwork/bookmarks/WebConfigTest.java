@@ -4,7 +4,6 @@ import org.junit.jupiter.api.Test;
 
 class WebConfigTest {
 
-    @Test
-    void addCorsMappings() {
-    }
+  @Test
+  void addCorsMappings() {}
 }

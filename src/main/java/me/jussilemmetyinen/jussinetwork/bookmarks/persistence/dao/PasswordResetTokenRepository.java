@@ -1,7 +1,7 @@
 package me.jussilemmetyinen.jussinetwork.bookmarks.persistence.dao;
 
-import me.jussilemmetyinen.jussinetwork.bookmarks.persistence.domain.PasswordResetToken;
-import me.jussilemmetyinen.jussinetwork.bookmarks.persistence.domain.User;
+import me.jussilemmetyinen.jussinetwork.bookmarks.persistence.model.PasswordResetToken;
+import me.jussilemmetyinen.jussinetwork.bookmarks.persistence.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;

@@ -1,4 +1,4 @@
-package me.jussilemmetyinen.jussinetwork.bookmarks.exception;
+package me.jussilemmetyinen.jussinetwork.bookmarks.web.error;
 
 public final class UserAlreadyExistException extends RuntimeException {
     public static final long serialVersionUID = 7930422537495853313L;

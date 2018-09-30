@@ -2,9 +2,9 @@ package me.jussilemmetyinen.jussinetwork.bookmarks.spring;
 
 import me.jussilemmetyinen.jussinetwork.bookmarks.persistence.dao.PrivilegeRepository;
 import me.jussilemmetyinen.jussinetwork.bookmarks.persistence.dao.RoleRepository;
-import me.jussilemmetyinen.jussinetwork.bookmarks.persistence.domain.Privilege;
-import me.jussilemmetyinen.jussinetwork.bookmarks.persistence.domain.Role;
-import me.jussilemmetyinen.jussinetwork.bookmarks.persistence.domain.User;
+import me.jussilemmetyinen.jussinetwork.bookmarks.persistence.model.Privilege;
+import me.jussilemmetyinen.jussinetwork.bookmarks.persistence.model.Role;
+import me.jussilemmetyinen.jussinetwork.bookmarks.persistence.model.User;
 import me.jussilemmetyinen.jussinetwork.bookmarks.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationListener;
