@@ -26,17 +26,17 @@ import javax.transaction.Transactional;
 @Transactional
 public class UserService implements IUserService {
 
-  @Autowired private UserRepository repository;
+  private final UserRepository repository;
 
-  @Autowired private VerificationTokenRepository tokenRepository;
+  private final VerificationTokenRepository tokenRepository;
 
-  @Autowired private PasswordResetTokenRepository passwordTokenRepository;
+  private final PasswordResetTokenRepository passwordTokenRepository;
 
-  @Autowired private PasswordEncoder passwordEncoder;
+  private final PasswordEncoder passwordEncoder;
 
-  @Autowired private RoleRepository roleRepository;
+  private final RoleRepository roleRepository;
 
-  @Autowired private SessionRegistry sessionRegistry;
+  private final SessionRegistry sessionRegistry;
 
   public static final String TOKEN_INVALID = "invalidToken";
   public static final String TOKEN_EXPIRED = "expired";
@@ -45,6 +45,22 @@ public class UserService implements IUserService {
   public static String QR_PREFIX =
       "https://chart.googleapis.com/chart?chs=200x200&chld=M%%7C0&cht=qr&chl=";
   public static String APP_NAME = "SpringRegistration";
+
+  @Autowired
+  public UserService(
+      UserRepository repository,
+      VerificationTokenRepository tokenRepository,
+      PasswordResetTokenRepository passwordTokenRepository,
+      PasswordEncoder passwordEncoder,
+      RoleRepository roleRepository,
+      SessionRegistry sessionRegistry) {
+    this.repository = repository;
+    this.tokenRepository = tokenRepository;
+    this.passwordTokenRepository = passwordTokenRepository;
+    this.passwordEncoder = passwordEncoder;
+    this.roleRepository = roleRepository;
+    this.sessionRegistry = sessionRegistry;
+  }
 
   // API
 

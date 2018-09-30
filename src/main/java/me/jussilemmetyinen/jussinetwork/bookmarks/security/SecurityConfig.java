@@ -14,7 +14,12 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
-  @Autowired UserService userService;
+  private final UserService userService;
+
+  @Autowired
+  public SecurityConfig(UserService userService) {
+    this.userService = userService;
+  }
 
   @Bean
   public PasswordEncoder passwordEncoder() {
