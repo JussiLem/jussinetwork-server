@@ -12,11 +12,17 @@ import java.util.Locale;
 @RestController
 public class UserController {
 
-    @Autowired
+    private final
     ActiveUserStore activeUserStore;
 
-    @Autowired
+    private final
     IUserService userService;
+
+    @Autowired
+    public UserController(ActiveUserStore activeUserStore, IUserService userService) {
+        this.activeUserStore = activeUserStore;
+        this.userService = userService;
+    }
 
     @GetMapping(value = "/loggedUsers")
     public String getLoggedUsers(final Locale locale, final Model model) {
