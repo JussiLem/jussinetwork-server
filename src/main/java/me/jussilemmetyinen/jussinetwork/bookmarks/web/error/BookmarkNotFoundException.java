@@ -1,13 +1,12 @@
-package me.jussilemmetyinen.jussinetwork.bookmarks.exception;
+package me.jussilemmetyinen.jussinetwork.bookmarks.web.error;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
 @ResponseStatus(HttpStatus.NOT_FOUND)
 public class BookmarkNotFoundException extends RuntimeException {
-    public BookmarkNotFoundException(Long bookmarkId) {
+  public BookmarkNotFoundException(Long bookmarkId) {
 
-        super("Could not found bookmark '" + bookmarkId + "'." );
-    }
-
+    super("Could not found bookmark '" + bookmarkId + "'.");
+  }
 }
