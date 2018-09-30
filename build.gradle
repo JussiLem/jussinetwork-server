@@ -30,6 +30,7 @@ ext {
 
 dependencies {
     implementation group: 'javax.xml.bind', name: 'jaxb-api', version: '2.3.0'
+    annotationProcessor group: 'org.projectlombok', name: 'lombok', version: '1.18.2'
     implementation group: 'org.projectlombok', name: 'lombok', version: '1.18.2'
     implementation group: 'com.google.guava', name: 'guava', version: '26.0-jre'
     implementation group: 'org.passay', name: 'passay', version: '1.0'
