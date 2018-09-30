@@ -1,17 +1,19 @@
 package me.jussilemmetyinen.jussinetwork.bookmarks.service;
 
+import me.jussilemmetyinen.jussinetwork.bookmarks.dto.UserDto;
 import me.jussilemmetyinen.jussinetwork.bookmarks.persistence.domain.PasswordResetToken;
 import me.jussilemmetyinen.jussinetwork.bookmarks.persistence.domain.User;
 import me.jussilemmetyinen.jussinetwork.bookmarks.persistence.domain.VerificationToken;
 import me.jussilemmetyinen.jussinetwork.bookmarks.exception.UserAlreadyExistException;
 
+import javax.validation.Valid;
 import java.io.UnsupportedEncodingException;
 import java.util.List;
 import java.util.Optional;
 
 public interface IUserService {
 
-    User registerNewUserAccount() throws UserAlreadyExistException;
+    User registerNewUserAccount(@Valid UserDto accountDto) throws UserAlreadyExistException;
 
     User getUser(String verificationToken);
 
@@ -37,7 +39,7 @@ public interface IUserService {
 
     void changeUserPassword(User user, String password);
 
-    boolean checkifValidOldPassword(User user, String password);
+    boolean checkIfValidOldPassword(User user, String password);
 
     String validateVerificationToken (String token);
 
